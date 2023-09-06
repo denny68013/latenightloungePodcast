@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://use.typekit.net/saf6rnk.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap");
+
+body {
+  font-family: "Comic Neue", cursive;
+  font-family: "Noto Serif TC", serif;
+
+  /* font-family: "ar-udjingxiheib5", sans-serif;
+  font-weight: 500;
+  font-style: normal; */
+  background-color: #0e1115;
+}
+
+.cardContainer {
+  --animate-delay: 0.25s;
+}
+.episodeInfoText {
+  line-height: 1.8;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.episodeInfoText a,
+.episodeTimelineText a {
+  color: #f0ff48;
+}
+
+.episodeTimelineText {
+  line-height: 1.8;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.thisEpisodeTitle {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.thisEpisodeDateAndDuration {
+  font-size: 1.5rem;
+}
+.cardContainer:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.videoTag {
+  opacity: 0.1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* .inner {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  height: 50vh;
+}
+.wrapper {
+  position: absolute;
+  display: flex;
+} */
+.episodeCardImage {
+  /* width: 100%;
+  height: 50%;
+  padding: 0 15px; */
+  object-fit: contain;
+  /* height: 4000px; */
+}
+.cardPickedContainer {
+  /* height: 400px; */
+}
+.cardPickedContainer:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+.episodeCardPicked {
+  width: 100%;
+}
+
+/* .cardPickedContainer {
+  width: 23%;
+  display: flex;
+  justify-content: center;
+  animation: swipe var(--speed) linear backwards;
+  animation-fill-mode: forwards;
+} */
+.card {
+  background-color: #0e111500;
+}
+
+.card-body {
+  color: white;
+  height: 100px;
+}
+.recommendTitle {
+  color: rgb(234, 255, 0);
+  font-size: 2.5rem;
+}
+.recommendText {
+  /* color: #eaff00; */
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(234, 255, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-toggler-icon {
+  border: 0px solid rgb(255, 255, 255);
+}
+
+.episodeSearchInput {
+  background-color: #0e1115;
+  color: white;
+  width: 60%;
+  font-size: 1.5rem;
+}
+.episodeSearchInput:focus {
+  border-color: rgba(251, 251, 251, 0.8);
+  /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset,
+    0 0 8px rgba(251, 251, 251, 0.8); */
+  outline: 1px;
+}
+.titleSecond {
+  color: #eaff00;
+  font-weight: 400;
+}
+/* @keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-105%);
+  }
+} */
+
+/* .headImg {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+} */
+/* .headImgContainer {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(
+      180deg,
+      #0e1115 0%,
+      rgba(0, 0, 0, 0) 50%,
+      #0e1115 100%
+    ),
+    url("/asset/images/世界盡頭深夜酒館_新_無字_大.png"),
+    lightgray -47.578px -397.038px / 107.347% 223.06% no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+/* .secondImgContainer {
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(90deg, #0e1115 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(
+      180deg,
+      #0e1115 0%,
+      rgba(8, 10, 12, 0.13) 20.31%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(7, 9, 11, 0.08) 82.29%,
+      #0e1115 100%
+    ),
+    url("../public/asset/images/世界盡頭深夜酒館_城市圖.png"),
+    lightgray 50% / cover no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+.thirdImgContainer {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(90deg, #0e1115 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(
+      180deg,
+      #0e1115 0%,
+      rgba(8, 10, 12, 0.13) 20.31%,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(7, 9, 11, 0.08) 82.29%,
+      #0e1115 100%
+    ),
+    url("../public/asset/images/世界盡頭深夜酒館_新_無字.png"),
+    lightgray 50% / cover no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logoImg {
+  width: 30%;
+}
+.navbar {
+  background-color: #0e1115;
+  position: sticky;
+}
+#navBarLogo {
+  width: 40px;
+}
+
+.navBarBtn {
+  width: 100%;
+  height: 10%;
+  color: white;
+}
+
+.nav-item {
+  margin-right: 5px;
+}
+
+#navBarListenBadge {
+  font-weight: 500;
+  color: #eaff00;
+}
+#navBarListenBadge:hover {
+  font-weight: 500;
+  color: rgb(56, 56, 56);
+}
+
+.listenBadge {
+  background-color: white;
+  color: rgb(56, 56, 56);
+  box-shadow: 0px 1px 14px -3px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 1px 14px -3px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 1px 14px -3px rgba(0, 0, 0, 0.13);
+}
+
+.listenBadge:hover {
+  background-color: #eaff00;
+  color: rgb(56, 56, 56);
+  box-shadow: 0px 1px 14px -3px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0px 1px 14px -3px rgba(0, 0, 0, 0.13);
+  -moz-box-shadow: 0px 1px 14px -3px rgba(0, 0, 0, 0.13);
+  transition: 300ms;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+.titleContainer,
+.episodeContainer {
+  width: 65%;
+}
+.episodeCard {
+  box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0px 1px 14px 0px rgba(0, 0, 0, 0.19);
+}
+
+.episodeCardImage {
+  object-fit: cover;
+  height: 100%;
+  object-position: 50% 85%;
+}
+.episodeInfo {
+  margin-bottom: 0px;
+}
+
+.card {
+  border-radius: 3px;
+}
+
+.add-shadow {
+  box-shadow: 0px 1px 13 12px -3px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 0px 1px 12px -3px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 0px 1px 12px -3px rgba(0, 0, 0, 0.37);
+}
+.pageText {
+  color: grey;
+}
+.pageText:hover {
+  color: grey;
+}
+
+.nav-link.active.pt-0.pb-sm-0 {
+  color: #eaff00;
+}
+.title {
+  color: #eaff00;
+}
+
+.secondSection {
+  color: #eaff00;
+  top: 30%;
+  left: 7%;
+}
+.episodeSection {
+  color: #eaff00;
+  /* top: 30%;
+  left: 7%; */
+}
+
+#onActive {
+  background-color: #eaff00;
+  border-color: #eaff00;
+}
+#onActive:hover {
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .episodeCardImage {
+    height: 100%;
+  }
+  .titleContainer,
+  .episodeContainer {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-text {
+    font-size: 1.1em;
+  }
+  .titleContainer,
+  .episodeContainer {
+    width: 90%;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+  .episodeCardImage {
+    height: 100%;
+  }
+  .textCard {
+    /* height: 100%; */
+  }
+}
+@media screen and (max-width: 576px) {
+  .episodeCardImage {
+    height: 100%;
+  }
+}

@@ -1,0 +1,96 @@
+import { NextResponse } from "next/server";
+const convert = require("xml-js");
+
+export async function GET(request) {
+  console.log(request.url);
+  try {
+    const response = await fetch(
+      `https://open.firstory.me/rss/user/cl73fj8k80b7201z65r8bh7w7`
+    );
+    const xmlData = await response.text(); // 等待获取XML数据
+
+    const jsonData = convert.xml2json(xmlData, { compact: true, spaces: 4 }); // 将XML转换为JSON
+
+    // 解析XML JSON数据以提取每集的标题和内容
+    const episodesData = parseEpisodes(jsonData);
+
+    return NextResponse.json({ episodes: episodesData });
+  } catch (error) {
+    console.error("Error:", error);
+    return NextResponse.json({
+      error: "An error occurred while fetching or processing the data.",
+    });
+  }
+}
+
+function parseEpisodes(xmlJson) {
+  const episodes = [];
+  const xmlObj = JSON.parse(xmlJson);
+
+  if (xmlObj && xmlObj.rss && xmlObj.rss.channel && xmlObj.rss.channel.item) {
+    const items = xmlObj.rss.channel.item;
+
+    items.forEach((item) => {
+      const title = item.title._cdata; // 获取每集标题
+      const content = item.description._cdata; // 获取每集内容
+      const image = item["itunes:image"]._attributes.href;
+      const duration = extractDuration(item);
+      const hours = duration.hours;
+      const minutes = duration.minutes;
+      const pubDate = formatDateToChinese(item.pubDate._text);
+      const link = item["guid"]._text;
+
+      episodes.push({
+        title,
+        content,
+        image,
+        hours,
+        minutes,
+        pubDate,
+        link,
+      });
+    });
+  }
+
+  return episodes;
+}
+function extractDuration(item) {
+  // 提取<itunes:duration>元素的值并将其转换为秒
+  const durationText = item["itunes:duration"]._text;
+  const durationInSeconds = parseDurationString(durationText);
+  const hours = Math.floor(durationInSeconds / 3600);
+  const minutes = Math.floor((durationInSeconds % 3600) / 60);
+
+  return {
+    hours,
+    minutes,
+  };
+}
+function parseDurationString(durationText) {
+  // 将形如 "577" 的字符串转换为秒
+  return parseInt(durationText, 10);
+}
+
+function formatDateToChinese(dateString) {
+  const months = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+  ];
+
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+
+  return { year, month: months[month], day };
+}
