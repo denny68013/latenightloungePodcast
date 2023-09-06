@@ -7,7 +7,7 @@ const HeadImg = () => {
     width: "100%",
     height: "500px",
     background:
-      'linear-gradient(180deg,#0e1115 0%,rgba(0, 0, 0, 0) 50%,#0e1115 100%),url("/asset/images/世界盡頭深夜酒館_封面擴增.png"),lightgray -47.578px -397.038px / 107.347% 223.06% no-repeat',
+      'linear-gradient(180deg,#0e1115 0%,rgba(0, 0, 0, 0) 50%,#0e1115 100%),url("/asset/images/世界盡頭深夜酒館_封面擴增.jpg"),lightgray -47.578px -397.038px / 107.347% 223.06% no-repeat',
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
