@@ -49,7 +49,7 @@ const Home = () => {
     const options = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.1, // 视口可见度达到 10% 时触发回调
+      threshold: 0.1,
     };
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {

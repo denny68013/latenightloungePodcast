@@ -3,6 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CardPicked = (props) => {
+  const imageLoader = ({ src }) => {
+    return `https://d3mww1g1pfq2pt.cloudfront.net/Image/${src}`;
+  };
+
   const [isAnimateEnd, setIsAnimateEnd] = useState(false);
 
   const handleAnimationEnd = () => {
@@ -21,7 +25,8 @@ const CardPicked = (props) => {
         <Link href={`/episode/${props.link}`}>
           {props.image ? (
             <Image
-              src={props.image}
+              loader={imageLoader}
+              src={props.image.split("/Image/")[1]}
               className="card-img-top episodeCardImage"
               alt="..."
               width={3000}
