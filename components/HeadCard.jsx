@@ -7,7 +7,7 @@ const HeadCard = () => {
     width: "100%",
     height: "500px",
     background:
-      'linear-gradient(180deg,#0e1115 0%,rgba(0, 0, 0, 0) 50%,#0e1115 100%),url("/asset/images/世界盡頭深夜酒館_封面擴增.jpg"),lightgray -47.578px -397.038px / 107.347% 223.06% no-repeat',
+      'linear-gradient(180deg,#0e1115 0%,rgba(0, 0, 0, 0) 50%,#0e1115 100%),url("/asset/images/latenightloungepodcast_extend.jpg"),lightgray -47.578px -397.038px / 107.347% 223.06% no-repeat',
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
@@ -16,7 +16,7 @@ const HeadCard = () => {
     width: "100%",
     height: "500px",
     background:
-      'linear-gradient(90deg, #0e1115 0%, rgba(0, 0, 0, 0) 100%),linear-gradient(180deg,#0e1115 0%,rgba(8, 10, 12, 0.13) 20.31%,rgba(0, 0, 0, 0) 50%,rgba(7, 9, 11, 0.08) 82.29%,#0e1115 100%),url("/asset/images/世界盡頭深夜酒館_城市圖.png"),lightgray 50% / cover no-repeat',
+      'linear-gradient(90deg, #0e1115 0%, rgba(0, 0, 0, 0) 100%),linear-gradient(180deg,#0e1115 0%,rgba(8, 10, 12, 0.13) 20.31%,rgba(0, 0, 0, 0) 50%,rgba(7, 9, 11, 0.08) 82.29%,#0e1115 100%),url("/asset/images/latenightloungepodcast_city.png"),lightgray 50% / cover no-repeat',
     backgroundSize: "cover",
     backgroundPosition: "center",
   };

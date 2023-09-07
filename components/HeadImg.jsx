@@ -3,11 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 const HeadImg = () => {
+  const imageLoader = ({ src }) => {
+    return `http://localhost:3000/_next/image?url=${src}`;
+  };
   const coverStyle = {
     width: "100%",
     height: "500px",
     background:
-      'linear-gradient(180deg,#0e1115 0%,rgba(0, 0, 0, 0) 50%,#0e1115 100%),url("/asset/images/世界盡頭深夜酒館_封面擴增.jpg"),lightgray -47.578px -397.038px / 107.347% 223.06% no-repeat',
+      'linear-gradient(180deg,#0e1115 0%,rgba(0, 0, 0, 0) 50%,#0e1115 100%),url("/asset/images/latenightloungepodcast_extend.jpg"),lightgray -47.578px -397.038px / 107.347% 223.06% no-repeat',
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
@@ -16,7 +19,7 @@ const HeadImg = () => {
     width: "100%",
     height: "500px",
     background:
-      'linear-gradient(90deg, #0e1115 0%, rgba(0, 0, 0, 0) 100%),linear-gradient(180deg,#0e1115 0%,rgba(8, 10, 12, 0.13) 20.31%,rgba(0, 0, 0, 0) 50%,rgba(7, 9, 11, 0.08) 82.29%,#0e1115 100%),url("/asset/images/世界盡頭深夜酒館_城市圖.png"),lightgray 50% / cover no-repeat',
+      'linear-gradient(90deg, #0e1115 0%, rgba(0, 0, 0, 0) 100%),linear-gradient(180deg,#0e1115 0%,rgba(8, 10, 12, 0.13) 20.31%,rgba(0, 0, 0, 0) 50%,rgba(7, 9, 11, 0.08) 82.29%,#0e1115 100%),url("/asset/images/latenightloungepodcast_city.png"),lightgray 50% / cover no-repeat',
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
@@ -30,7 +33,7 @@ const HeadImg = () => {
       <div className="container-fluid">
         <div className="text-center">
           <Image
-            src="/asset/images/節目LOGO.png"
+            src="/asset/images/latenightloungepodcast_textlogo.png"
             className="img-fluid animate__animated animate__fadeInUp"
             alt="Podcast Logo Text"
             width={300}

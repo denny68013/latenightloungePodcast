@@ -27,7 +27,7 @@ const Navbar = () => {
         <Link className="navbar-brand" href="/">
           <div>
             <Image
-              src="/asset/images/世界盡頭深夜酒館_新_LOGO有字.png"
+              src="/asset/images/latenightloungepodcast_logo_with_text.png"
               id="navBarLogo"
               width={30}
               height={30}

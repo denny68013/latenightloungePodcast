@@ -10,7 +10,7 @@ const Home = () => {
   const recommendWord = [
     "意外發現寶藏的具體實現！",
     "你真的很喜歡說自己「老了」嗎？",
-    "「身為導演的片單就應該選自己創作的片」這句話我依舊印象深刻",
+    "這一集就是很好聽！",
     "這個節目出發的起點",
   ];
   const targetDivRef = useRef();
@@ -32,7 +32,7 @@ const Home = () => {
         setEpisodePicked([
           data["episodes"].find((e) => e.link === "clj01j9ss05vx01vo3prt6fbt"),
           data["episodes"].find((e) => e.link === "cl87hg6z703qo01wmdlaucmqj"),
-          data["episodes"].find((e) => e.link === "clgq2d0e500eb01tb9e8terft"),
+          data["episodes"].find((e) => e.link === "cldfyuc9u086x01t424amhyj3"),
           data["episodes"].find((e) => e.link === "cl74na45s000n01te14xn3syb"),
         ]);
         // setFinLoading(true);
