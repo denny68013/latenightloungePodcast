@@ -24,7 +24,8 @@ body {
   font-style: normal;
 }
 .episodeInfoText a,
-.episodeTimelineText a {
+.episodeTimelineText a,
+strong {
   color: #f0ff48;
 }
 
@@ -323,6 +324,18 @@ h2 {
   .episodeContainer {
     width: 90%;
   }
+  .thisEpisodeTitle {
+    font-size: 2.3rem;
+  }
+  .thisEpisodeDateAndDuration {
+    font-size: 1.5rem;
+  }
+  .episodeInfoText {
+    line-height: 2;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+  }
 }
 @media screen and (max-width: 768px) {
   .card-text {
@@ -341,6 +354,12 @@ h2 {
   }
   .textCard {
     /* height: 100%; */
+  }
+  .thisEpisodeTitle {
+    font-size: 2rem;
+  }
+  .thisEpisodeDateAndDuration {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 576px) {
