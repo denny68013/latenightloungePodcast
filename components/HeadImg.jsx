@@ -24,6 +24,15 @@ const HeadImg = () => {
     backgroundPosition: "center",
   };
 
+  // const logoTextStyle = {
+  //   // width: "10%",
+  //   height: "300px",
+  //   background:
+  //     'url("/asset/images/latenightloungepodcast_textlogo.png") / no-repeat',
+  //   backgroundSize: "20%",
+  //   backgroundPosition: "center",
+  // };
+
   return (
     <div>
       <div className="container-fluid text-center animate__animated animate__fadeIn">
@@ -32,13 +41,18 @@ const HeadImg = () => {
 
       <div className="container-fluid">
         <div className="text-center">
-          <Image
+          {/* <Image
             src="/asset/images/latenightloungepodcast_textlogo.png"
             className="img-fluid animate__animated animate__fadeInUp"
             alt="Podcast Logo Text"
             width={300}
             height={0}
             style={{ width: "auto", height: "auto" }}
+          /> */}
+          <div
+            className="img-fluid animate__animated animate__fadeInUp logoTextImage"
+            // width={300}
+            // height={0}
           />
         </div>
       </div>

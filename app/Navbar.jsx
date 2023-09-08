@@ -21,19 +21,20 @@ const Navbar = () => {
       console.error("複製失敗：", error);
     }
   };
+
   return (
     <nav className="navbar navbar-expand-md sticky-top p-0">
       <div className="container-fluid">
         <Link className="navbar-brand" href="/">
-          <div>
-            <Image
+          <div className="navBarLogo">
+            {/* <Image
               src="/asset/images/latenightloungepodcast_logo_with_text.png"
               id="navBarLogo"
               width={30}
               height={30}
               alt="Podcast Logo"
               style={{ width: "auto", height: "auto" }}
-            />
+            /> */}
           </div>
         </Link>
         <Link

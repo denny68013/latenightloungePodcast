@@ -91,6 +91,23 @@ strong {
 .episodeCardPicked {
   width: 100%;
 }
+.logoTextImage {
+  height: 10vw;
+  width: 30%;
+  margin: auto;
+  background-image: url("/asset/images/latenightloungepodcast_textlogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.navBarLogo {
+  height: 40px;
+  width: 40px;
+  background-image: url("/asset/images/latenightloungepodcast_logo_with_text.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /* .cardPickedContainer {
   width: 23%;
@@ -335,6 +352,10 @@ h2 {
     font-size: 1rem;
     letter-spacing: 0.4px;
     font-weight: 400;
+  }
+  .logoTextImage {
+    height: 20vw;
+    width: 60%;
   }
 }
 @media screen and (max-width: 768px) {
