@@ -7,11 +7,10 @@ export async function GET(request) {
     const response = await fetch(
       `https://open.firstory.me/rss/user/cl73fj8k80b7201z65r8bh7w7`
     );
-    const xmlData = await response.text(); // 等待获取XML数据
+    const xmlData = await response.text();
 
-    const jsonData = convert.xml2json(xmlData, { compact: true, spaces: 4 }); // 将XML转换为JSON
+    const jsonData = convert.xml2json(xmlData, { compact: true, spaces: 4 });
 
-    // 解析XML JSON数据以提取每集的标题和内容
     const episodesData = parseEpisodes(jsonData);
 
     return NextResponse.json({ episodes: episodesData });
@@ -31,8 +30,8 @@ function parseEpisodes(xmlJson) {
     const items = xmlObj.rss.channel.item;
 
     items.forEach((item) => {
-      const title = item.title._cdata; // 获取每集标题
-      const content = item.description._cdata; // 获取每集内容
+      const title = item.title._cdata;
+      const content = item.description._cdata;
       const image = item["itunes:image"]._attributes.href;
       const duration = extractDuration(item);
       const hours = duration.hours;
@@ -55,7 +54,6 @@ function parseEpisodes(xmlJson) {
   return episodes;
 }
 function extractDuration(item) {
-  // 提取<itunes:duration>元素的值并将其转换为秒
   const durationText = item["itunes:duration"]._text;
   const durationInSeconds = parseDurationString(durationText);
   const hours = Math.floor(durationInSeconds / 3600);
