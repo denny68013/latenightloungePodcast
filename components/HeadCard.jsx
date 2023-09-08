@@ -30,7 +30,7 @@ const HeadCard = () => {
       <div className="container-fluid">
         <div className="text-center">
           <Image
-            src="/asset/images/節目LOGO.png"
+            src="/asset/images/latenightloungepodcast_textlogo.png"
             className="img-fluid "
             alt="Podcast Logo Text"
             width={300}
