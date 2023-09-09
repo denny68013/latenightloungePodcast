@@ -259,6 +259,7 @@ strong {
 .loadingBadge:hover {
   background-color: #eaff00;
   color: rgb(56, 56, 56);
+  border: 1px solid #eaff00;
 }
 
 .listenBadge:hover {
