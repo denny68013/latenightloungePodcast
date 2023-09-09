@@ -101,10 +101,6 @@ const Home = () => {
           </div>
         ) : null}
       </div>
-
-      {/* <button type="button" onClick={handleSubmit}>
-        Click
-      </button> */}
     </div>
   );
 };

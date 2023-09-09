@@ -10,7 +10,6 @@ const CardPicked = (props) => {
   const [isAnimateEnd, setIsAnimateEnd] = useState(false);
 
   const handleAnimationEnd = () => {
-    console.log("OK");
     setIsAnimateEnd(true);
   };
   let animateClass = !isAnimateEnd ? ` animate__fadeInUp` : null;

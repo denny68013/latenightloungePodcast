@@ -9,8 +9,10 @@ import { useState, useEffect } from "react";
 const EpisodeList = () => {
   const [finLoading, setFinLoading] = useState(false);
   const [episode, setEpisode] = useState([]);
+  const [episodeLoaded, setEpisodeLoaded] = useState([]);
   const [filteredEpisodes, setFilteredEpisodes] = useState([]);
   const [hasSearchResult, setHasSearchResult] = useState(true);
+  const [episodeLoadedFin, setEpisodeLoadedFin] = useState(false);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -21,7 +23,7 @@ const EpisodeList = () => {
         const data = await response.json();
         console.log(data["episodes"]);
         setEpisode(data["episodes"]);
-
+        setEpisodeLoaded(data["episodes"].slice(0, 12));
         setFinLoading(true);
       } catch (error) {
         console.error(error);
@@ -31,22 +33,35 @@ const EpisodeList = () => {
   }, []);
   const handleChange = (e) => {
     console.log(e.target.value);
-
-    const newFilteredEpisodes = episode.filter((episode) => {
-      const titleMatch = episode.title.includes(e.target.value);
-      const descriptionMatch = episode.content.includes(e.target.value);
-      return titleMatch || descriptionMatch;
-    });
-    console.log(newFilteredEpisodes);
-    setFilteredEpisodes(newFilteredEpisodes);
-    if (newFilteredEpisodes.length === 0) {
-      console.log("000");
-      setHasSearchResult(false);
+    if (e.target.value === "") {
+      // setHasSearchResult(false);
+      setFilteredEpisodes(episodeLoaded);
       setFinLoading(true);
     } else {
-      console.log("NOT 0");
-      setHasSearchResult(true);
-      setFinLoading(false);
+      const newFilteredEpisodes = episode.filter((episode) => {
+        const titleMatch = episode.title.includes(e.target.value);
+        const descriptionMatch = episode.content.includes(e.target.value);
+        return titleMatch || descriptionMatch;
+      });
+      console.log(newFilteredEpisodes);
+      setFilteredEpisodes(newFilteredEpisodes);
+      if (newFilteredEpisodes.length === 0) {
+        console.log("0");
+        setHasSearchResult(false);
+        setFinLoading(true);
+      } else {
+        console.log("NOT 0");
+        setHasSearchResult(true);
+        setFinLoading(false);
+      }
+    }
+  };
+  const handleLoadingMore = () => {
+    const i = episodeLoaded.length;
+    if (i !== episode.length) {
+      setEpisodeLoaded(episode.slice(0, i + 9));
+    } else {
+      setEpisodeLoadedFin(true);
     }
   };
 
@@ -61,7 +76,7 @@ const EpisodeList = () => {
         <div className="row groupForm mb-5 text-center">
           <div className="col-12 ">
             <input
-              className="border-0 border-bottom episodeSearchInput d-inline-block "
+              className="border-0 border-bottom episodeSearchInput d-inline-block text-center"
               onChange={handleChange}
             />
           </div>
@@ -78,7 +93,7 @@ const EpisodeList = () => {
                 <hr className="text-white" />
               </div>
             )}
-            {episode.map((item, index) => (
+            {episodeLoaded.map((item, index) => (
               <Card
                 key={index}
                 title={item.title}
@@ -90,6 +105,14 @@ const EpisodeList = () => {
                 link={item.link}
               />
             ))}
+            <div className="text-center ">
+              <div
+                className="badge rounded-0 fs-5 fs-md-3 loadingBadge p-3 px-4  w-25"
+                onClick={handleLoadingMore}
+              >
+                {!episodeLoadedFin ? "載入更多" : "已經是第一集了！"}
+              </div>
+            </div>
           </div>
         ) : (
           <div className="row mt-3  gx-5 ">
