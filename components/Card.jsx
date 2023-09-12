@@ -34,51 +34,9 @@ const Card = (props) => {
             />
           ) : null}
         </Link>
-        {/* <div className="card-body textCard d-flex flex-column">
-            <h5 className="card-text lh-base">{props.title}</h5>
-            <p className="text-body-secondary mb-0 mt-auto">
-              {props.pubDate && (
-                <>
-                  {props.pubDate.year}年{props.pubDate.month}月
-                  {props.pubDate.day}日｜
-                  {props.hours + " "}
-                  小時
-                  {" " + props.minutes + " "}
-                  分鐘
-                </>
-              )}
-            </p>
-            <a
-              href="./episodePage/episode_01.html"
-              className="stretched-link"
-            />
-          </div> */}
       </div>
     </div>
   );
 };
 
 export default Card;
-
-{
-  /* <div className="col-xs-12 col-sm-6 mb-4 d-flex">
-        <div className="card episodeCard flex-grow-1">
-          <Image
-            src="./img/二十趴沈.jpeg"
-            className="card-img-top episodeCardImage"
-            alt="..."
-            fill
-          />
-          <div className="card-body textCard d-flex flex-column">
-            <h5 className="card-text">二十趴沈｜蛙化現象</h5>
-            <p className="text-body-secondary mb-0 mt-auto">
-              2023年6月12日｜24分鐘
-            </p>
-            <a
-              href="./episodePage/episode_02.html"
-              className="stretched-link"
-            />
-          </div>
-        </div>
-      </div> */
-}

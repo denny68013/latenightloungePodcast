@@ -36,17 +36,23 @@ function parseEpisodes(xmlJson) {
       const duration = extractDuration(item);
       const hours = duration.hours;
       const minutes = duration.minutes;
+      const seconds = duration.seconds;
       const pubDate = formatDateToChinese(item.pubDate._text);
       const link = item["guid"]._text;
-
+      let url = decodeURIComponent(item.enclosure._attributes.url).split(
+        "url="
+      )[1];
+      const audioLink = url;
       episodes.push({
         title,
         content,
         image,
         hours,
         minutes,
+        seconds,
         pubDate,
         link,
+        audioLink,
       });
     });
   }
@@ -58,10 +64,12 @@ function extractDuration(item) {
   const durationInSeconds = parseDurationString(durationText);
   const hours = Math.floor(durationInSeconds / 3600);
   const minutes = Math.floor((durationInSeconds % 3600) / 60);
+  const seconds = Math.floor(durationInSeconds % 60);
 
   return {
     hours,
     minutes,
+    seconds,
   };
 }
 function parseDurationString(durationText) {
