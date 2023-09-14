@@ -90,7 +90,7 @@ const CardPicked = (props) => {
       className={`mb-4 d-flex  animate__animated ${animateClass} text-center container-fluid flex-column flex-md-row `}
       style={{ "--speed": `${props.speed}ms` }}
     >
-      <div className="card episodeCardPicked flex-grow-2 border-0 rounded-0 w-50 align-self-center mb-5 mb-md-0">
+      <div className="card episodeCardPicked flex-grow-2 border-0 rounded-0 w-50 align-self-md-center mb-5 mb-md-0">
         {props.finLoading ? (
           <div>
             <Link href={`/episode/${props.link}`}>
@@ -98,10 +98,10 @@ const CardPicked = (props) => {
                 <Image
                   loader={imageLoader}
                   src={props.image.split("/Image/")[1]}
-                  className="episodeCardImage animate__animated"
+                  className="episodeCardImage animate__animated "
                   alt="..."
-                  width={300}
-                  height={300}
+                  width={282}
+                  height={282}
                   quality={100}
                 />
               ) : null}
@@ -118,12 +118,12 @@ const CardPicked = (props) => {
         onTimeUpdate={handleAudioUpdate}
       ></audio>
       {props.pubDate ? (
-        <div className="row w-100 ms-3">
+        <div className="row w-100 ms-0 ms-sm-3">
           <p className="cardPlayerTitle text-start mb-0">{props.title}</p>
 
-          <p className="cardPlayerPubDateAndDuration text-start mb-3">{`${props.pubDate.year}年${props.pubDate.month}月${props.pubDate.day}日｜${props.hours}小時${props.minutes}分鐘`}</p>
+          <p className="cardPlayerPubDateAndDuration text-start mb-sm-3">{`${props.pubDate.year}年${props.pubDate.month}月${props.pubDate.day}日｜${props.hours}小時${props.minutes}分鐘`}</p>
 
-          <div className="col-3 text-center justify-content-around d-flex align-self-center mt-auto">
+          <div className=" col-4 col-md-3 text-center justify-content-around d-flex align-self-center mt-auto">
             <FontAwesomeIcon
               icon={faBackward}
               size="xl"
@@ -146,7 +146,7 @@ const CardPicked = (props) => {
               onClick={handleForward}
             />
           </div>
-          <div className="col-9 mt-auto">
+          <div className=" col-8 col-md-9 mt-auto">
             <div className="d-flex justify-content-between">
               <p className="cardPlayerTime text-start d-inline-block">
                 {musicCurrentTime}
@@ -170,6 +170,51 @@ const CardPicked = (props) => {
               onChange={handleMusicProgressor}
             />
           </div>
+
+          {/* <div className="d-block d-sm-none col-4 col-md-3 text-center justify-content-around d-flex align-self-center mt-auto">
+            <div className="d-flex justify-content-between">
+              <p className="cardPlayerTime text-start d-inline-block">
+                {musicCurrentTime}
+              </p>
+              <FontAwesomeIcon
+                icon={faBackward}
+                size="xl"
+                style={{ color: "#eaff00" }}
+                className="playButton"
+                onClick={handleBackward}
+              />
+              <FontAwesomeIcon
+                icon={!isPlaying ? faPlay : faPause}
+                size="xl"
+                style={{ color: "#eaff00" }}
+                className="playButton"
+                onClick={handlePlay}
+              />
+              <FontAwesomeIcon
+                icon={faForward}
+                size="xl"
+                style={{ color: "#eaff00" }}
+                className="playButton"
+                onClick={handleForward}
+              />
+            </div>
+            <p className="cardPlayerTime text-start  d-inline-block">
+              {props.finLoading
+                ? `${props.hours < 10 ? `0${props.hours}` : props.hours}:${
+                    props.minutes < 10 ? `0${props.minutes}` : props.minutes
+                  }:${props.seconds < 10 ? `0${props.seconds}` : props.seconds}`
+                : "99:99:99"}
+            </p>
+          </div>
+
+          <div className="d-block d-sm-none col-8 col-md-9 mt-auto">
+            <input
+              type="range"
+              className="playerController w-100"
+              value={audioProgress}
+              onChange={handleMusicProgressor}
+            />
+          </div> */}
         </div>
       ) : null}
     </div>
