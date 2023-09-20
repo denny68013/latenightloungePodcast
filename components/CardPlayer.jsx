@@ -90,7 +90,7 @@ const CardPicked = (props) => {
       className={`mb-4 d-flex  animate__animated ${animateClass} text-center container-fluid flex-column flex-md-row `}
       style={{ "--speed": `${props.speed}ms` }}
     >
-      <div className="card episodeCardPicked flex-grow-2 border-0 rounded-0 w-50 align-self-md-center mb-5 mb-md-0">
+      <div className="card latestEpisodeCardPicked  flex-grow-2 border-0 rounded-0 align-self-md-center mb-5 mb-md-0">
         {props.finLoading ? (
           <div>
             <Link href={`/episode/${props.link}`}>
@@ -118,12 +118,12 @@ const CardPicked = (props) => {
         onTimeUpdate={handleAudioUpdate}
       ></audio>
       {props.pubDate ? (
-        <div className="row w-100 ms-0 ms-sm-3">
+        <div className="row w-100 ms-0 ms-sm-3 ms-lg-0">
           <p className="cardPlayerTitle text-start mb-0">{props.title}</p>
 
           <p className="cardPlayerPubDateAndDuration text-start mb-sm-3">{`${props.pubDate.year}年${props.pubDate.month}月${props.pubDate.day}日｜${props.hours}小時${props.minutes}分鐘`}</p>
 
-          <div className=" col-4 col-md-3 text-center justify-content-around d-flex align-self-center mt-auto">
+          <div className=" col-4 col-md-3 col-lg-4 text-center justify-content-around d-flex align-self-center mt-auto">
             <FontAwesomeIcon
               icon={faBackward}
               size="xl"
@@ -146,7 +146,7 @@ const CardPicked = (props) => {
               onClick={handleForward}
             />
           </div>
-          <div className=" col-8 col-md-9 mt-auto">
+          <div className=" col-8 col-md-9 col-lg-8 mt-auto">
             <div className="d-flex justify-content-between">
               <p className="cardPlayerTime text-start d-inline-block">
                 {musicCurrentTime}
