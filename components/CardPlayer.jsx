@@ -90,7 +90,7 @@ const CardPicked = (props) => {
       className={`mb-4 d-flex  animate__animated ${animateClass} text-center container-fluid flex-column flex-md-row `}
       style={{ "--speed": `${props.speed}ms` }}
     >
-      <div className="card episodeCardPicked flex-grow-2 border-0 rounded-0  align-self-md-center mb-5 mb-md-0">
+      <div className="card episodeCardPicked flex-grow-2 border-0 rounded-0 w-50 align-self-md-center mb-5 mb-md-0">
         {props.finLoading ? (
           <div>
             <Link href={`/episode/${props.link}`}>
