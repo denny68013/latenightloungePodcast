@@ -152,6 +152,12 @@ strong {
 .episodeCardPicked {
   width: 100%;
 }
+
+@media screen and (min-width: 960px) {
+  .episodeCardPicked {
+    width: 50%;
+  }
+}
 .logoTextImage {
   height: 10vw;
   width: 30%;
@@ -398,7 +404,7 @@ h2 {
     display: inline;
   }
   .latestEpisodeContainer {
-    margin-bottom: 400px;
+    /* margin-bottom: 400px; */
   }
   .cardPlayer {
     width: 80%;
