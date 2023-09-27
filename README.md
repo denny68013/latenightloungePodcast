@@ -1,35 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 《世界盡頭深夜酒館》 Podcast 網站
 
-## Getting Started
+---
 
-First, run the development server:
+每個好的 Podcast 都需要一個自己的網站，《世界盡頭深夜酒館》也不例外。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 這裡放了什麼？
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+這裡存放著《世界盡頭深夜酒館》的網站原始碼與網站上的圖片，皆存放在這裡。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### _Podcast 的集數音檔與單集封面，皆存放在 Hosting 平台 Firstory 上，本 repository 並無存放任何音檔資料與單集封面。_
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 網站如何抓取 Podcast 資料？
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+透過 Firstory 提供的 RSS 連結，分析後動態生成首頁的最新單集或各集頁面。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 網站使用了什麼技術？
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+基本架構：HTML、CSS、JavaScript。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# latenightlounge_podcast
+前端框架：React、BootStrap。
+
+前後端整合框架：Next.js。
+
+部署服務：Vercel。
+
+---
+
+## 圖片聲明
+
+本網站的圖片有使用到 Adobe Photoshop 的 Generative Fill AI 技術輔助生成。
+
+---
+
+## 維護者
+
+《世界盡頭深夜酒館》主持人 力瑋。
