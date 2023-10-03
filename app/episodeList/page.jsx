@@ -107,7 +107,7 @@ const EpisodeList = () => {
             ))}
             <div className="text-center ">
               <div
-                className="badge rounded-0 fs-5 fs-md-3 loadingBadge p-3 px-4  w-25"
+                className="badge rounded-0 fs-5 fs-md-3 loadingBadge p-3 px-4 w-75 w-md-25"
                 onClick={handleLoadingMore}
               >
                 {!episodeLoadedFin ? "載入更多" : "已經是第一集了！"}
