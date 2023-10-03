@@ -93,7 +93,7 @@ const Episode = (req) => {
               className="mt-5 animate__animated animate__fadeIn"
             ></iframe>
           </div>
-          <div className="container-fluid text-start episodeContainer mt-4 text-white ps-5">
+          <div className="container-fluid text-start episodeContainer mt-4 text-white ps-2 ps-md-5">
             <h3>【本集節目內容】</h3>
             <hr />
             <div className="episodeInfoText text-break">
