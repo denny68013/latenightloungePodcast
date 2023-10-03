@@ -71,7 +71,7 @@ const Home = () => {
 
   return (
     <div className="allContainer">
-      <HeadImg />
+      <HeadImg className="animate__animated animate__fadeInUp" />
       <br />
       <div className="latestEpisodeContainer ">
         <h2 className="text-center mt-3 mb-5 latestEpisodeTitle animate__animated animate__fadeInUp">

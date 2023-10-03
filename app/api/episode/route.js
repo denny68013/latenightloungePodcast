@@ -73,7 +73,6 @@ function extractDuration(item) {
   };
 }
 function parseDurationString(durationText) {
-  // 将形如 "577" 的字符串转换为秒
   return parseInt(durationText, 10);
 }
 
