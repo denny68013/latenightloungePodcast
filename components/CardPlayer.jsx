@@ -22,7 +22,7 @@ const CardPicked = (props) => {
   //   console.log(props.pubDate);
   // }, []);
   const imageLoader = ({ src }) => {
-    return `https://d3mww1g1pfq2pt.cloudfront.net/Image/${src}`;
+    return `https://image.firstory-cdn.me/Image/${src}`;
   };
 
   const [isAnimateEnd, setIsAnimateEnd] = useState(false);
