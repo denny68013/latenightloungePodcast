@@ -72,7 +72,7 @@ const HeadImg = () => {
         <Link
           className="listenButton"
           id="followHostBadge"
-          href="https://open.firstory.me/user/latenightlounge_podcast/platforms"
+          href="https://open.firstory.me/user/latenightloungepodcast/platforms"
         >
           <h2 className="badge rounded-0 fs-5 fs-md-3 listenBadge p-3 px-4 animate__animated animate__fadeInUp animate__delay-1s">
             點我聽Podcast！
