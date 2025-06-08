@@ -38,7 +38,7 @@ const Navbar = () => {
           </div>
         </Link>
         <Link
-          href="https://open.firstory.me/user/latenightlounge_podcast/platforms"
+          href="https://open.firstory.me/user/latenightloungepodcast/platforms"
           className="nav-link active pt-0 pb-sm-0"
           id="navBarListenBadge"
         >
